@@ -1,317 +1,97 @@
-# Test Project
+# Restaurant Reservation App
 
-A **SPECTACULAR**, fully responsive restaurant website built with cutting-edge web technologies and advanced visual effects. This project demonstrates **SUPER SENIOR-LEVEL** frontend development with mind-blowing iridescent animations, particle systems, 3D transforms, and performance optimization.
+A Flask-based restaurant website with reservation, newsletter, menu, and health-check endpoints. The project keeps backend business rules, validation, and presentation code in separate modules so the API can be tested independently from the frontend.
 
-## Features
-- Basic project structure
-- Git version control
+## Project Structure
 
-### Core Functionality
-- **Responsive Design**: Fully responsive layout that works seamlessly across all devices (mobile, tablet, desktop)
-- **Interactive Menu**: Dynamic menu filtering system with smooth animations and shimmer effects
-- **Reservation System**: Advanced form validation with real-time feedback
-- **Smooth Scrolling**: Elegant navigation with smooth scroll behavior and parallax effects
-- **Toast Notifications**: User-friendly notification system for feedback
-- **Newsletter Subscription**: Email subscription with validation
-
-### 🎨 CRAZY ADVANCED VISUAL EFFECTS
-- **Iridescent Animations**: Multi-layered gradient animations with holographic color shifts
-- **Particle System**: 50+ floating particles with dynamic animations
-- **Custom Cursor**: Interactive cursor with trailing effects and hover states
-- **3D Card Tilt**: Mouse-tracking 3D perspective transforms on cards
-- **Parallax Scrolling**: Multi-layer depth effects throughout the page
-- **Morphing Blobs**: Animated liquid-like background elements
-- **Ripple Effects**: Click-triggered ripple animations
-- **Glitch Effects**: Cyberpunk-style glitch hover effects
-- **Aurora Backgrounds**: Animated northern lights-inspired gradients
-- **Neon Glow**: Pulsing neon text effects with multiple shadow layers
-- **Glass Morphism**: Frosted glass effects with backdrop blur
-- **Shimmer Overlays**: Sweeping light reflections across elements
-- **Floating Orbs**: Large animated gradient orbs in hero section
-- **Loading Animation**: Smooth iridescent loading screen
-
-### 🚀 Advanced Features
-- **Intersection Observer API**: Lazy loading and scroll-triggered animations
-- **Performance Monitoring**: Built-in performance tracking (LCP, FID)
-- **Accessibility (WCAG 2.1 AA)**:
-  - Semantic HTML5 markup
-  - ARIA labels and roles
-  - Keyboard navigation support
-  - Screen reader compatibility
-  - Focus management
-  - Skip links
-- **Modern CSS**:
-  - CSS Custom Properties (variables) with iridescent gradients
-  - CSS Grid & Flexbox
-  - 250+ lines of advanced keyframe animations
-  - Holographic color rotation effects
-  - Liquid morphing animations
-  - Prism refraction effects
-  - Aurora wave animations
-  - Responsive typography with clamp()
-  - Mobile-first approach
-  - Backdrop filters and glass morphism
-- **Smart JavaScript**:
-  - ES6+ syntax (classes, arrow functions, destructuring)
-  - 15+ specialized component classes
-  - Particle system with physics
-  - Custom cursor tracking
-  - 3D transform calculations
-  - Parallax scroll engine
-  - Ripple effect generator
-  - Morphing blob system
-  - Debouncing and throttling for performance
-  - Modular architecture with separation of concerns
-  - Event delegation
-  - Progressive enhancement
-
-## 🚀 Technologies Used
-
-- **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Modern styling with custom properties and animations
-- **Vanilla JavaScript**: No frameworks - pure, optimized JavaScript
-- **Google Fonts**: Playfair Display & Lato font families
-
-## 📁 Project Structure
-
-```
-insignia-testing/
-├── index.html          # Main HTML file with semantic structure
-├── styles.css          # Comprehensive CSS with modern patterns
-├── app.js             # Interactive JavaScript with smart features
-└── README.md          # Project documentation
+```text
+backend/
+  app.py          Flask application factory and API routes
+  config.py       Environment-specific configuration
+  exceptions.py   Application exception hierarchy
+  models.py       Dataclass models
+  services.py     Reservation, email, and menu services
+  validators.py   Input and business-rule validation
+frontend/
+  templates/      Jinja templates
+  static/         CSS and JavaScript assets
+tests/
+  test_app.py     Unit and API tests
 ```
 
-## 🎨 Design Highlights
+## Requirements
 
-### Color Palette
-- **Primary**: Rich brown tones (#2c1810, #4a2f23)
-- **Accent**: Elegant gold (#d4af37, #e6c968)
-- **Neutrals**: Clean whites and grays for balance
+- Python 3.9+
+- pip
 
-### Typography
-- **Headings**: Playfair Display (serif) - elegant and classic
-- **Body**: Lato (sans-serif) - clean and readable
-
-### Layout Sections
-1. **Hero Section**: Full-screen hero with gradient overlay and call-to-action
-2. **Features**: Three-column grid showcasing restaurant highlights
-3. **Menu**: Filterable menu items with categories (Appetizers, Mains, Desserts)
-4. **About**: Restaurant story with animated statistics
-5. **Reservations**: Comprehensive booking form with validation
-6. **Contact**: Contact information with map placeholder
-7. **Footer**: Newsletter signup and social links
-
-## 💻 JavaScript Architecture
-
-### Class-Based Components
-
-#### Core Components
-1. **NavigationManager**: Handles mobile menu, smooth scrolling, and active link highlighting
-2. **MenuFilter**: Dynamic menu filtering with smooth animations
-3. **FormValidator**: Comprehensive form validation with real-time feedback
-4. **ToastNotification**: User notification system
-5. **ScrollAnimations**: Intersection Observer-based animations
-6. **BackToTop**: Smooth scroll-to-top functionality
-7. **LazyLoader**: Image lazy loading for performance
-8. **AccessibilityEnhancer**: Keyboard navigation and ARIA enhancements
-9. **PerformanceMonitor**: Performance metrics tracking
-
-#### 🎨 Advanced Visual Effect Components
-10. **ParticleSystem**: Generates and animates 50+ floating particles
-11. **CursorEffects**: Custom cursor with 10-element trailing effect
-12. **Card3DTilt**: Mouse-tracking 3D perspective transforms
-13. **ParallaxScroll**: Multi-layer parallax scrolling engine
-14. **RippleEffect**: Click-triggered ripple animations
-15. **MorphingBlobs**: Animated liquid background elements
-16. **IridescentText**: Holographic gradient text effects
-17. **SmoothReveal**: Staggered scroll-reveal animations
-18. **GlitchEffect**: Cyberpunk glitch hover effects
-19. **LoadingAnimation**: Iridescent loading screen
-
-### Utility Functions
-- `debounce()`: Limits function execution rate
-- `throttle()`: Controls function execution frequency
-- `isInViewport()`: Checks element visibility
-- `animateNumber()`: Smooth number counting animations
-
-## 🔧 Key Features Implementation
-
-### Form Validation
-- Real-time validation with visual feedback
-- Custom validation rules (required, email, phone, date)
-- Accessible error messages with ARIA
-- Future date validation for reservations
-- Phone number format validation
-
-### Menu Filtering
-- Smooth category transitions
-- Maintains layout during filtering
-- Keyboard accessible
-- ARIA roles for screen readers
-
-### Performance Optimizations
-- Debounced scroll events
-- Throttled resize handlers
-- Intersection Observer for lazy loading
-- CSS containment for layout optimization
-- Minimal repaints and reflows
-
-### Accessibility Features
-- Skip to main content link
-- Proper heading hierarchy
-- ARIA labels and roles
-- Keyboard navigation support
-- Focus visible indicators
-- Screen reader announcements
-- Reduced motion support
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 480px
-- **Tablet**: 481px - 768px
-- **Desktop**: > 768px
-
-## 🎯 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🚀 Getting Started
-
-### Prerequisites
-- A modern web browser
-- A local web server (optional, for best experience)
-
-### Installation
-
-1. Clone or download the repository
-2. Open `index.html` in your browser, or
-3. Use a local server:
+Install dependencies:
 
 ```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js (http-server)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
+python -m pip install -r requirements.txt
 ```
 
-4. Navigate to `http://localhost:8000`
+## Run Locally
 
-## 🎨 Customization
+```bash
+python run.py
+```
 
-### Colors
-Edit CSS custom properties in `styles.css`:
-```css
-:root {
-    --primary-color: #2c1810;
-    --accent-color: #d4af37;
-    /* ... more variables */
+The app starts on `http://localhost:5000`.
+
+## Test and Quality Checks
+
+```bash
+python -m pytest
+python -m black --check backend tests
+python -m flake8 backend tests --count --select=E9,F63,F7,F82 --show-source --statistics
+```
+
+## API
+
+### `GET /api/health`
+
+Returns service health and a UTC timestamp.
+
+### `GET /api/menu`
+
+Returns menu items grouped by category.
+
+### `POST /api/reservations`
+
+Creates a reservation after server-side validation.
+
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phone": "+1 (555) 123-4567",
+  "guests": 4,
+  "date": "2026-06-17",
+  "time": "19:00",
+  "message": "Window seat please"
 }
 ```
 
-### Content
-- Update text content in `index.html`
-- Modify menu items in the menu section
-- Change contact information in the contact section
+### `POST /api/newsletter`
 
-### Functionality
-- Add new validation rules in `FormValidator` class
-- Extend menu categories in `MenuFilter` class
-- Customize animations in CSS or JavaScript
+Subscribes an email address to the newsletter.
 
-## 📊 Performance Metrics
+```json
+{
+  "email": "john@example.com"
+}
+```
 
-The website is optimized for:
-- **First Contentful Paint (FCP)**: < 1.5s
-- **Largest Contentful Paint (LCP)**: < 2.5s
-- **First Input Delay (FID)**: < 100ms
-- **Cumulative Layout Shift (CLS)**: < 0.1
+## Business Rules
 
-## ♿ Accessibility Compliance
+- Reservations must be made at least 2 hours in advance.
+- Reservations can be made up to 90 days ahead.
+- The restaurant is closed on Mondays.
+- Available reservation slots run from 17:00 to 21:00 in 30-minute intervals.
+- Reservations are limited to 10 guests.
 
-- WCAG 2.1 Level AA compliant
-- Semantic HTML5 structure
-- Proper ARIA attributes
-- Keyboard navigation
-- Screen reader tested
-- Color contrast ratios meet standards
+## Current Limitations
 
-## 🔒 Security Considerations
-
-- Form validation on client-side (server-side validation required for production)
-- No inline JavaScript
-- Content Security Policy ready
-- XSS prevention through proper escaping
-
-## 🚀 Future Enhancements
-
-- [ ] Backend integration for reservations
-- [ ] Real-time availability checking
-- [ ] Online ordering system
-- [ ] Multi-language support (i18n)
-- [ ] Dark mode toggle
-- [ ] Progressive Web App (PWA) features
-- [ ] Service Worker for offline support
-- [ ] Payment integration
-- [ ] Customer reviews section
-- [ ] Photo gallery with lightbox
-
-## 📝 Code Quality
-
-### Best Practices Implemented
-- ✅ Semantic HTML5
-- ✅ BEM-like CSS naming convention
-- ✅ Mobile-first responsive design
-- ✅ Progressive enhancement
-- ✅ Separation of concerns
-- ✅ DRY (Don't Repeat Yourself) principle
-- ✅ Modular JavaScript architecture
-- ✅ Comprehensive comments and documentation
-- ✅ Performance optimization
-- ✅ Accessibility standards
-
-### Code Standards
-- ES6+ JavaScript
-- CSS3 with modern features
-- Consistent indentation (4 spaces)
-- Meaningful variable and function names
-- Comprehensive inline documentation
-
-## 🐛 Known Issues
-
-None at this time. Please report any issues you encounter.
-
-## 📄 License
-
-This project is created for demonstration purposes. Feel free to use and modify as needed.
-
-## 👨‍💻 Author
-
-Built with ❤️ by Bob - Senior Frontend Developer
-
-## 🙏 Acknowledgments
-
-- Google Fonts for typography
-- Modern CSS and JavaScript best practices
-- Web accessibility guidelines (WCAG)
-- Performance optimization techniques
-
----
-
-**Note**: This is a frontend demonstration project. For production use, implement proper backend services for form submissions, database integration, and security measures.
-
-## 📞 Support
-
-For questions or suggestions, please open an issue or contact the development team.
-
----
-
-*Last Updated: May 2026*
+- Reservation and newsletter data are stored in memory.
+- Email delivery is simulated through the service layer.
+- Database models and migrations are intentionally not active yet.

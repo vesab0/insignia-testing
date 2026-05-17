@@ -2,8 +2,8 @@
 Restaurant Management System Backend
 """
 
-__version__ = '1.0.0'
-__author__ = 'Bob - Senior Backend Developer'
+__version__ = "1.0.0"
+__author__ = "Insignia Team"
 
 from .app import create_app
 from .config import Config, get_config
@@ -16,25 +16,23 @@ from .exceptions import (
     EmailError,
     ReservationError,
     NotFoundError,
-    ConflictError
+    ConflictError,
 )
 
 __all__ = [
-    'create_app',
-    'Config',
-    'get_config',
-    'Reservation',
-    'Newsletter',
-    'MenuItem',
-    'ContactMessage',
-    'RestaurantException',
-    'ValidationError',
-    'ServiceError',
-    'DatabaseError',
-    'EmailError',
-    'ReservationError',
-    'NotFoundError',
-    'ConflictError',
+    "create_app",
+    "Config",
+    "get_config",
+    "Reservation",
+    "Newsletter",
+    "MenuItem",
+    "ContactMessage",
+    "RestaurantException",
+    "ValidationError",
+    "ServiceError",
+    "DatabaseError",
+    "EmailError",
+    "ReservationError",
+    "NotFoundError",
+    "ConflictError",
 ]
-
-# Made with Bob

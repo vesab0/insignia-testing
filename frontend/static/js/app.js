@@ -463,7 +463,6 @@ if ('serviceWorker' in navigator) {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
 
-// Made with Bob
 
 // ===================================
 // Advanced Particle System
