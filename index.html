@@ -3,446 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fine dining restaurant with exquisite cuisine and exceptional service">
-    <meta name="theme-color" content="#2c1810">
-    <title>La Maison Élégante - Fine Dining Restaurant</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>The Gourmet Restaurant</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Header with navigation -->
-    <header class="header" role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <div class="container">
-                <div class="nav-brand">
-                    <h1 class="logo">La Maison Élégante</h1>
-                    <p class="tagline">Fine Dining Experience</p>
-                </div>
-                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span class="hamburger"></span>
-                </button>
-                <ul class="nav-menu" role="menubar">
-                    <li role="none"><a href="#home" role="menuitem" class="nav-link active">Home</a></li>
-                    <li role="none"><a href="#menu" role="menuitem" class="nav-link">Menu</a></li>
-                    <li role="none"><a href="#about" role="menuitem" class="nav-link">About</a></li>
-                    <li role="none"><a href="#reservations" role="menuitem" class="nav-link">Reservations</a></li>
-                    <li role="none"><a href="#contact" role="menuitem" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+    <header class="header">
+        <h1>The Gourmet Restaurant</h1>
+        <p>Fine dining experience</p>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero" role="img" aria-label="Restaurant interior">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2 class="hero-title animate-fade-in">Experience Culinary Excellence</h2>
-            <p class="hero-subtitle animate-fade-in-delay">Where tradition meets innovation</p>
-            <div class="hero-cta animate-fade-in-delay-2">
-                <a href="#reservations" class="btn btn-primary">Reserve a Table</a>
-                <a href="#menu" class="btn btn-secondary">View Menu</a>
-            </div>
-        </div>
-        <div class="scroll-indicator" aria-hidden="true">
-            <span class="scroll-arrow"></span>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Features Section -->
-        <section class="features" aria-labelledby="features-heading">
-            <div class="container">
-                <h2 id="features-heading" class="sr-only">Our Features</h2>
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🍽️</div>
-                        <h3 class="feature-title">Exquisite Cuisine</h3>
-                        <p class="feature-description">Crafted by award-winning chefs using the finest seasonal ingredients</p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🍷</div>
-                        <h3 class="feature-title">Premium Wine Selection</h3>
-                        <p class="feature-description">Curated collection from renowned vineyards around the world</p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">✨</div>
-                        <h3 class="feature-title">Elegant Ambiance</h3>
-                        <p class="feature-description">Sophisticated atmosphere perfect for any special occasion</p>
-                    </article>
-                </div>
-            </div>
+    <main class="container">
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <div id="menuItems"></div>
         </section>
 
-        <!-- Menu Section -->
-        <section id="menu" class="menu-section" aria-labelledby="menu-heading">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="menu-heading" class="section-title">Our Menu</h2>
-                    <p class="section-subtitle">Discover our signature dishes</p>
-                </header>
-
-                <!-- Menu Filter -->
-                <div class="menu-filter" role="tablist" aria-label="Menu categories">
-                    <button class="filter-btn active" data-category="all" role="tab" aria-selected="true" aria-controls="menu-items">All</button>
-                    <button class="filter-btn" data-category="appetizers" role="tab" aria-selected="false" aria-controls="menu-items">Appetizers</button>
-                    <button class="filter-btn" data-category="mains" role="tab" aria-selected="false" aria-controls="menu-items">Main Courses</button>
-                    <button class="filter-btn" data-category="desserts" role="tab" aria-selected="false" aria-controls="menu-items">Desserts</button>
+        <section class="order-section">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Name:</label>
+                    <input type="text" id="customerName" required>
                 </div>
-
-                <!-- Menu Items -->
-                <div id="menu-items" class="menu-grid" role="tabpanel">
-                    <!-- Appetizers -->
-                    <article class="menu-item" data-category="appetizers">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <span class="menu-badge">Popular</span>
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Seared Scallops</h3>
-                                <span class="menu-item-price">$24</span>
-                            </div>
-                            <p class="menu-item-description">Pan-seared scallops with cauliflower purée and truffle oil</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Gluten-free</span>
-                                <span class="tag">Seafood</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="menu-item" data-category="appetizers">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Foie Gras Terrine</h3>
-                                <span class="menu-item-price">$28</span>
-                            </div>
-                            <p class="menu-item-description">Classic French terrine with fig compote and brioche</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Chef's Special</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="menu-item" data-category="appetizers">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Burrata Caprese</h3>
-                                <span class="menu-item-price">$18</span>
-                            </div>
-                            <p class="menu-item-description">Fresh burrata with heirloom tomatoes and basil pesto</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Vegetarian</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Main Courses -->
-                    <article class="menu-item" data-category="mains">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                            <span class="menu-badge">Signature</span>
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Wagyu Beef Tenderloin</h3>
-                                <span class="menu-item-price">$65</span>
-                            </div>
-                            <p class="menu-item-description">Premium wagyu with roasted vegetables and red wine reduction</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Premium</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="menu-item" data-category="mains">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Chilean Sea Bass</h3>
-                                <span class="menu-item-price">$48</span>
-                            </div>
-                            <p class="menu-item-description">Miso-glazed sea bass with bok choy and jasmine rice</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Seafood</span>
-                                <span class="tag">Gluten-free</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="menu-item" data-category="mains">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Duck Confit</h3>
-                                <span class="menu-item-price">$42</span>
-                            </div>
-                            <p class="menu-item-description">Slow-cooked duck leg with potato gratin and cherry gastrique</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Traditional</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Desserts -->
-                    <article class="menu-item" data-category="desserts">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Crème Brûlée</h3>
-                                <span class="menu-item-price">$14</span>
-                            </div>
-                            <p class="menu-item-description">Classic vanilla custard with caramelized sugar crust</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Classic</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="menu-item" data-category="desserts">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
-                            <span class="menu-badge">Popular</span>
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Chocolate Soufflé</h3>
-                                <span class="menu-item-price">$16</span>
-                            </div>
-                            <p class="menu-item-description">Dark chocolate soufflé with vanilla ice cream</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Chef's Special</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="menu-item" data-category="desserts">
-                        <div class="menu-item-image" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);"></div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Lemon Tart</h3>
-                                <span class="menu-item-price">$12</span>
-                            </div>
-                            <p class="menu-item-description">Tangy lemon curd in buttery pastry with meringue</p>
-                            <div class="menu-item-tags">
-                                <span class="tag">Light</span>
-                            </div>
-                        </div>
-                    </article>
+                
+                <div class="form-group">
+                    <label for="menuItem">Select Item:</label>
+                    <select id="menuItem" required>
+                        <option value="">Choose...</option>
+                    </select>
                 </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about-section" aria-labelledby="about-heading">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-content">
-                        <header>
-                            <h2 id="about-heading" class="section-title">Our Story</h2>
-                            <p class="section-subtitle">A legacy of culinary excellence</p>
-                        </header>
-                        <div class="about-text">
-                            <p>Founded in 1985, La Maison Élégante has been a cornerstone of fine dining, combining traditional French techniques with modern innovation. Our commitment to excellence has earned us numerous accolades and a loyal following of discerning diners.</p>
-                            <p>Led by Executive Chef Jean-Pierre Dubois, our culinary team sources the finest ingredients from local farms and international suppliers to create unforgettable dining experiences.</p>
-                        </div>
-                        <div class="about-stats">
-                            <div class="stat">
-                                <span class="stat-number" data-target="38">0</span>
-                                <span class="stat-label">Years of Excellence</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number" data-target="15">0</span>
-                                <span class="stat-label">Awards Won</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number" data-target="50000">0</span>
-                                <span class="stat-label">Happy Guests</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <div class="image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <span class="image-text">Chef at Work</span>
-                        </div>
-                    </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" value="1" required>
                 </div>
-            </div>
-        </section>
-
-        <!-- Reservations Section -->
-        <section id="reservations" class="reservations-section" aria-labelledby="reservations-heading">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="reservations-heading" class="section-title">Make a Reservation</h2>
-                    <p class="section-subtitle">Book your table for an unforgettable experience</p>
-                </header>
-                <form class="reservation-form" id="reservationForm" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Full Name *</label>
-                            <input type="text" id="name" name="name" class="form-input" required aria-required="true" placeholder="John Doe">
-                            <span class="form-error" role="alert"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-input" required aria-required="true" placeholder="john@example.com">
-                            <span class="form-error" role="alert"></span>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" required aria-required="true" placeholder="+1 (555) 123-4567">
-                            <span class="form-error" role="alert"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="guests" class="form-label">Number of Guests *</label>
-                            <select id="guests" name="guests" class="form-input" required aria-required="true">
-                                <option value="">Select guests</option>
-                                <option value="1">1 Guest</option>
-                                <option value="2">2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4 Guests</option>
-                                <option value="5">5 Guests</option>
-                                <option value="6">6 Guests</option>
-                                <option value="7+">7+ Guests</option>
-                            </select>
-                            <span class="form-error" role="alert"></span>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="date" class="form-label">Reservation Date *</label>
-                            <input type="date" id="date" name="date" class="form-input" required aria-required="true">
-                            <span class="form-error" role="alert"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="time" class="form-label">Preferred Time *</label>
-                            <select id="time" name="time" class="form-input" required aria-required="true">
-                                <option value="">Select time</option>
-                                <option value="17:00">5:00 PM</option>
-                                <option value="17:30">5:30 PM</option>
-                                <option value="18:00">6:00 PM</option>
-                                <option value="18:30">6:30 PM</option>
-                                <option value="19:00">7:00 PM</option>
-                                <option value="19:30">7:30 PM</option>
-                                <option value="20:00">8:00 PM</option>
-                                <option value="20:30">8:30 PM</option>
-                                <option value="21:00">9:00 PM</option>
-                            </select>
-                            <span class="form-error" role="alert"></span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Special Requests</label>
-                        <textarea id="message" name="message" class="form-input" rows="4" placeholder="Any dietary restrictions or special occasions?"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-large">Confirm Reservation</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="contact-heading" class="section-title">Get in Touch</h2>
-                    <p class="section-subtitle">We'd love to hear from you</p>
-                </header>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">📍</div>
-                            <div class="contact-details">
-                                <h3 class="contact-title">Address</h3>
-                                <p>123 Gourmet Avenue<br>New York, NY 10001</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">📞</div>
-                            <div class="contact-details">
-                                <h3 class="contact-title">Phone</h3>
-                                <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">✉️</div>
-                            <div class="contact-details">
-                                <h3 class="contact-title">Email</h3>
-                                <p><a href="mailto:info@lamaisonelegante.com">info@lamaisonelegante.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon" aria-hidden="true">🕐</div>
-                            <div class="contact-details">
-                                <h3 class="contact-title">Hours</h3>
-                                <p>Tuesday - Sunday: 5:00 PM - 11:00 PM<br>Monday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="map-placeholder">
-                        <div class="map-overlay" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);">
-                            <p>Interactive Map</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                
+                <button type="submit" class="btn-submit">Add to Order</button>
+            </form>
+            
+            <div id="orderSummary" class="order-summary"></div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">La Maison Élégante</h3>
-                    <p class="footer-text">Experience the finest in culinary artistry and exceptional service.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <span aria-hidden="true">f</span>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <span aria-hidden="true">📷</span>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <span aria-hidden="true">🐦</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#reservations">Reservations</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Newsletter</h4>
-                    <p class="footer-text">Subscribe for exclusive offers and updates</p>
-                    <form class="newsletter-form" id="newsletterForm">
-                        <input type="email" placeholder="Your email" class="newsletter-input" aria-label="Email for newsletter" required>
-                        <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">→</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 La Maison Élégante. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
     <script src="app.js"></script>
 </body>

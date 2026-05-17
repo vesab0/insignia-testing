@@ -1,8 +1,10 @@
-# La Maison Élégante - Fine Dining Restaurant Website
+# Test Project
 
 A **SPECTACULAR**, fully responsive restaurant website built with cutting-edge web technologies and advanced visual effects. This project demonstrates **SUPER SENIOR-LEVEL** frontend development with mind-blowing iridescent animations, particle systems, 3D transforms, and performance optimization.
 
-## 🌟 Features
+## Features
+- Basic project structure
+- Git version control
 
 ### Core Functionality
 - **Responsive Design**: Fully responsive layout that works seamlessly across all devices (mobile, tablet, desktop)
