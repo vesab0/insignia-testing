@@ -4,17 +4,19 @@ Setup configuration for the restaurant management system
 
 from setuptools import setup, find_packages
 
-with open("README_NEW.md", "r", encoding="utf-8") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+    requirements = [
+        line.strip() for line in fh if line.strip() and not line.startswith("#")
+    ]
 
 setup(
     name="restaurant-management-system",
     version="1.0.0",
-    author="Bob",
-    author_email="bob@example.com",
+    author="Insignia Team",
+    author_email="team@example.com",
     description="A professional restaurant management system with Flask backend",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -50,5 +52,3 @@ setup(
         ],
     },
 )
-
-# Made with Bob
