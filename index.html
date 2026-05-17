@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gourmet Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>The Gourmet Restaurant</h1>
+        <p>Fine dining experience</p>
+    </header>
+
+    <main class="container">
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <div id="menuItems"></div>
+        </section>
+
+        <section class="order-section">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Name:</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="menuItem">Select Item:</label>
+                    <select id="menuItem" required>
+                        <option value="">Choose...</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" value="1" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Add to Order</button>
+            </form>
+            
+            <div id="orderSummary" class="order-summary"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
