@@ -1,73 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Restorant Website</title>
-    <style>
-        body{
-            background-color:yellow;
-            font-family:arial;
-        }
-        .header{
-            color:red;
-            font-size:50px;
-        }
-        #menu{
-            background-color:green;
-            padding:10px;
-        }
-        .item{
-            color:white;
-            margin:5px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gourmet Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to Our Restorant!!!</h1>
-    </div>
-    
-    <div id="menu">
-        <h2 style="color:white;">Menu Items</h2>
-        <div class="item">Pizza - $10</div>
-        <div class="item">Burger - $8</div>
-        <div class="item">Pasta - $12</div>
-        <div class="item">Salad - $6</div>
-    </div>
-    
-    <br><br>
-    
-    <button onclick="orderFood()">Order Now!!!</button>
-    
-    <div id="order"></div>
-    
-    <script>
-        var total = 0;
-        var items = [];
-        
-        function orderFood(){
-            var name = prompt("What is your name?");
-            var food = prompt("What do you want to order?");
-            var quantity = prompt("How many?");
+    <header class="header">
+        <h1>The Gourmet Restaurant</h1>
+        <p>Fine dining experience</p>
+    </header>
+
+    <main class="container">
+        <section class="menu-section">
+            <h2>Our Menu</h2>
+            <div id="menuItems"></div>
+        </section>
+
+        <section class="order-section">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Name:</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="menuItem">Select Item:</label>
+                    <select id="menuItem" required>
+                        <option value="">Choose...</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" value="1" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Add to Order</button>
+            </form>
             
-            items.push(food);
-            
-            if(food == "Pizza"){
-                total = total + 10 * quantity;
-            }
-            if(food == "Burger"){
-                total = total + 8 * quantity;
-            }
-            if(food == "Pasta"){
-                total = total + 12 * quantity;
-            }
-            if(food == "Salad"){
-                total = total + 6 * quantity;
-            }
-            
-            document.getElementById("order").innerHTML = "<h3>Thank you " + name + "!</h3><p>You ordered: " + food + "</p><p>Quantity: " + quantity + "</p><p>Total: $" + total + "</p>";
-            
-            alert("Order placed!");
-        }
-    </script>
+            <div id="orderSummary" class="order-summary"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
